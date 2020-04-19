@@ -4,9 +4,7 @@ namespace DatingApp.api.Migrations
 {
     public partial class initialcreate : Migration
     {
-        protected override void Up(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.CreateTable(
+        protected override void Up(MigrationBuilder migrationBuilder) => migrationBuilder.CreateTable(
                 name: "Values",
                 columns: table => new
                 {
@@ -18,12 +16,8 @@ namespace DatingApp.api.Migrations
                 {
                     table.PrimaryKey("PK_Values", x => x.id);
                 });
-        }
 
-        protected override void Down(MigrationBuilder migrationBuilder)
-        {
-            migrationBuilder.DropTable(
+        protected override void Down(MigrationBuilder migrationBuilder) => migrationBuilder.DropTable(
                 name: "Values");
-        }
     }
 }
