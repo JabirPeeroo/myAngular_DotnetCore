@@ -20,8 +20,8 @@ export class NavComponent implements OnInit {
       this.alertify.success('Logged in successfully');
     }, error => {
       this.alertify.error(error);
-    }, () =>{
-      this.router.navigate(['/members']);
+    }, () => {
+      this.router.navigate(['/home']);
     });
   }
 
@@ -34,5 +34,4 @@ export class NavComponent implements OnInit {
     this.alertify.message('loggedOut');
     this.router.navigate(['/home']);
   }
-
 }
